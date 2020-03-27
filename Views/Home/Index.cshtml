@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>How long do you live with Vladimir Putin*?</h1>
+    <form asp-controller="Home" asp-action="Result">
+        Enter your birthdate: <input type="text" id="birthDatePicker" name="birthDate" />
+        <input type="submit" value="Calculate" id="birthDateSubmit" name="submitButton" />
+    </form>
+</div>
+
+<br />
+
+<div class="text-info">
+    <p>* As a start point of the beginning is taken May 7th, 2000. The period when Dmitry Medvedev was the president of Russia is ignored.</p>
+</div>
+
+@section Scripts
+{
+    <script>
+        $(function(){
+            $("#birthDatePicker").datepicker();
+        });
+    </script>
+}
